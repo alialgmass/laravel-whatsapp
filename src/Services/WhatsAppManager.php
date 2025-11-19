@@ -12,7 +12,7 @@ class WhatsAppManager
     {
         $name = $name ?: config('whatsapp.default');
 
-        if (!isset($this->drivers[$name])) {
+        if (! isset($this->drivers[$name])) {
             $config = config("whatsapp.connections.$name");
 
             $this->drivers[$name] = match ($name) {

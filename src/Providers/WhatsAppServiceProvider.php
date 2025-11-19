@@ -2,9 +2,9 @@
 
 namespace Algmass\WhatsApp\Providers {
 
-    use Illuminate\Support\ServiceProvider;
-    use Algmass\WhatsApp\Services\WhatsAppService;
     use Algmass\WhatsApp\Services\WhatsAppManager;
+    use Algmass\WhatsApp\Services\WhatsAppService;
+    use Illuminate\Support\ServiceProvider;
 
     class WhatsAppServiceProvider extends ServiceProvider
     {
@@ -13,7 +13,7 @@ namespace Algmass\WhatsApp\Providers {
             $this->mergeConfigFrom(__DIR__.'/../../config/whatsapp.php', 'whatsapp');
 
             $this->app->singleton('whatsapp.manager', function () {
-                return new WhatsAppManager();
+                return new WhatsAppManager;
             });
 
             $this->app->singleton('whatsapp', function ($app) {
@@ -27,7 +27,7 @@ namespace Algmass\WhatsApp\Providers {
         {
             // publish config
             $this->publishes([
-                __DIR__.'/../../config/whatsapp.php' => config_path('whatsapp.php')
+                __DIR__.'/../../config/whatsapp.php' => config_path('whatsapp.php'),
             ], 'config');
         }
     }

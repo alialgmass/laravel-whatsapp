@@ -1,29 +1,21 @@
 <?php
 
 namespace Algmass\WhatsApp\Jobs;
+
 use Algmass\WhatsApp\Services\WhatsAppService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-
 class SendWhatsAppMessageJob implements ShouldQueue
 {
     use InteractsWithQueue, Queueable, SerializesModels;
 
-    public $payload;
-    public $driverName;
-
-    public function __construct(array $payload, ?string $driverName = null)
-    {
-        $this->payload = $payload;
-        $this->driverName = $driverName;
-    }
+    public function __construct(private string $phone, private string $message) {}
 
     public function handle(WhatsAppService $whatsapp)
     {
-        // حاول تنفيذ الارسال — يمكن تسجيل الأخطاء والتكرار.
-        $whatsapp->send($this->payload, null, $this->driverName);
+        $whatsapp->send($this->phone, $this->message);
     }
 }
