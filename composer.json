@@ -2,6 +2,7 @@
   "name": "algmass/whatsapp",
   "description": "Laravel WhatsApp integration using Green API",
   "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Ali\\WhatsApp\\": "src/"
