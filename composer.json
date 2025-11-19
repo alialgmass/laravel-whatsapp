@@ -1,0 +1,25 @@
+{
+  "name": "ali/whatsapp",
+  "description": "Laravel WhatsApp integration using Green API",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Ali\\WhatsApp\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ali\\WhatsApp\\Providers\\WhatsAppServiceProvider"
+      ],
+      "aliases": {
+        "WhatsApp": "Ali\\WhatsApp\\Facades\\WhatsApp"
+      }
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": "^10.0",
+    "green-api/whatsapp-api-client-php": "*"
+  }
+}
