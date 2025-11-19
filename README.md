@@ -183,17 +183,3 @@ src/
 ## 📄 الترخيص
 
 الباكدج تحت رخصة MIT ومتاح للاستخدام الحر.
-
----
-
-# 🎉 Ready for GitHub + Packagist
-
-This README is formatted for **GitHub Markdown** and already suitable for Packagist.
-
-لو تريد إضافة:
-✓ Badges (Downloads / Version / Stars)
-✓ Changelog
-✓ GitHub Actions CI
-✓ Full documentation pages
-
-بلغني وأضيفها فورًا. 🚀🔥
