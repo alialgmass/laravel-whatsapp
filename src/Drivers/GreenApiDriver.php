@@ -17,7 +17,7 @@ class GreenApiDriver implements WhatsAppDriverInterface
     public function sendMessage(string $to, string $message): array
     {
         return $this->client->message()->send([
-            'chatId' => $to . '@c.us',
+            'chatId' => $to.'@c.us',
             'message' => $message,
         ]);
     }
