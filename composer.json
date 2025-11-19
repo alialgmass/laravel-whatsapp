@@ -10,10 +10,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Ali\\WhatsApp\\Providers\\WhatsAppServiceProvider"
+        "Algmass\\WhatsApp\\Providers\\WhatsAppServiceProvider"
       ],
       "aliases": {
-        "WhatsApp": "Ali\\WhatsApp\\Facades\\WhatsApp"
+        "WhatsApp": "Algmass\\WhatsApp\\Facades\\WhatsApp"
       }
     }
   },
