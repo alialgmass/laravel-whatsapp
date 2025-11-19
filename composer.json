@@ -1,5 +1,5 @@
 {
-  "name": "ali/whatsapp",
+  "name": "algmass/whatsapp",
   "description": "Laravel WhatsApp integration using Green API",
   "type": "library",
   "autoload": {
