@@ -1,6 +1,6 @@
 <?php
 
-namespace Ali\WhatsApp\Facades;
+namespace Algmass\WhatsApp\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

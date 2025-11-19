@@ -1,6 +1,6 @@
 <?php
 
-namespace Ali\WhatsApp\Services;
+namespace Algmass\WhatsApp\Services;
 
 class WhatsAppService
 {

@@ -1,7 +1,7 @@
 <?php
 
-namespace Ali\WhatsApp\Jobs;
-use Ali\WhatsApp\Services\WhatsAppService;
+namespace Algmass\WhatsApp\Jobs;
+use Algmass\WhatsApp\Services\WhatsAppService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;

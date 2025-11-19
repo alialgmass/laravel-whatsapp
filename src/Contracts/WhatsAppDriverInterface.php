@@ -1,6 +1,6 @@
 <?php
 
-namespace Ali\WhatsApp\Contracts;
+namespace Algmass\WhatsApp\Contracts;
 
 interface WhatsAppDriverInterface
 {
