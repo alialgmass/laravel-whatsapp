@@ -1,33 +1,34 @@
 <?php
 
-namespace Ali\WhatsApp\Providers;
+namespace Algmass\WhatsApp\Providers {
 
-use Illuminate\Support\ServiceProvider;
-use Ali\WhatsApp\Services\WhatsAppService;
-use Ali\WhatsApp\Services\WhatsAppManager;
+    use Illuminate\Support\ServiceProvider;
+    use Algmass\WhatsApp\Services\WhatsAppService;
+    use Algmass\WhatsApp\Services\WhatsAppManager;
 
-class WhatsAppServiceProvider extends ServiceProvider
-{
-    public function register()
+    class WhatsAppServiceProvider extends ServiceProvider
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/whatsapp.php', 'whatsapp');
+        public function register()
+        {
+            $this->mergeConfigFrom(__DIR__.'/../../config/whatsapp.php', 'whatsapp');
 
-        $this->app->singleton('whatsapp.manager', function () {
-            return new WhatsAppManager();
-        });
+            $this->app->singleton('whatsapp.manager', function () {
+                return new WhatsAppManager();
+            });
 
-        $this->app->singleton('whatsapp', function ($app) {
-            return new WhatsAppService(
-                $app->make('whatsapp.manager')
-            );
-        });
-    }
+            $this->app->singleton('whatsapp', function ($app) {
+                return new WhatsAppService(
+                    $app->make('whatsapp.manager')
+                );
+            });
+        }
 
-    public function boot()
-    {
-        // publish config
-        $this->publishes([
-            __DIR__.'/../../config/whatsapp.php' => config_path('whatsapp.php')
-        ], 'config');
+        public function boot()
+        {
+            // publish config
+            $this->publishes([
+                __DIR__.'/../../config/whatsapp.php' => config_path('whatsapp.php')
+            ], 'config');
+        }
     }
 }

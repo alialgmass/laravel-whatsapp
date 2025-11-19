@@ -1,8 +1,8 @@
 <?php
 
-namespace Ali\WhatsApp\Services;
+namespace Algmass\WhatsApp\Services;
 
-use Ali\WhatsApp\Drivers\GreenApiDriver;
+use Algmass\WhatsApp\Drivers\GreenApiDriver;
 
 class WhatsAppManager
 {

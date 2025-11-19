@@ -1,8 +1,8 @@
 <?php
 
-namespace Ali\WhatsApp\Drivers;
+namespace Algmass\WhatsApp\Drivers;
 
-use Ali\WhatsApp\Contracts\WhatsAppDriverInterface;
+use Algmass\WhatsApp\Contracts\WhatsAppDriverInterface;
 use GreenApi\Client;
 
 class GreenApiDriver implements WhatsAppDriverInterface
